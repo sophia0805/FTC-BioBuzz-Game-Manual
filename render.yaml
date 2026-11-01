@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: ftc-biobuzz-backend
+    runtime: python
+    plan: starter
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: API_KEY
+        sync: false
+      - key: AI_MODEL
+        value: meta-llama/llama-3.3-70b-instruct
+      - key: STORAGE_DIR
+        value: /opt/render/project/src/backend/storage
+      - key: FRONTEND_URL
+        fromService:
+          name: ftc-biobuzz-frontend
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+    disk:
+      name: game-manual-storage
+      mountPath: /opt/render/project/src/backend/storage
+      sizeGB: 1
+
+  - type: web
+    name: ftc-biobuzz-frontend
+    runtime: node
+    plan: starter
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: BACKEND_URL
+        fromService:
+          name: ftc-biobuzz-backend
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
