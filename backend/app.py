@@ -70,15 +70,24 @@ def chat(request: ChatRequest):
 
     try:
         context = retrieve_context(query)
-        prompt = f"""You are an assistant for the FIRST Tech Challenge 2026-2027 BioBuzz game manual.
-Use only the game-manual excerpts below. If the answer is not in the excerpts, say you cannot find it in the provided rules.
-Cite page numbers when they are available.
+        prompt = f"""You are a knowledgeable assistant for the FIRST Tech Challenge 2026-2027 BioBuzz season.
 
-Game Rules:
+You have two sources of knowledge — use both:
+1. The game manual excerpts provided below (cite page numbers when available).
+2. Your general knowledge about FTC BioBuzz, including the game theme, field elements, scoring, robots, and the broader FTC program.
+
+When answering:
+- Prioritize the manual excerpts for specific rules and scoring details.
+- Supplement with your general knowledge about BioBuzz when the manual doesn't cover it or when context about the game theme, field, or season is helpful.
+- Clearly indicate when something comes from the manual (e.g. "According to the manual...") vs. general knowledge (e.g. "Based on what's known about BioBuzz...").
+- If neither source has the answer, say so honestly.
+
+Game Manual Excerpts:
 {context}
 
 Question: {query}
 Answer:"""
+
 
         response = requests.post(
             AI_URL,
