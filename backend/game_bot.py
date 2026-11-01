@@ -16,7 +16,7 @@ def ask_question(query: str) -> str:
 Game Rules:
 {context}
 Question: {query}
-Answer based only on the rules provided:"""
+Answer based on the rules provided, but also feel free to use outside context (research) to give context to your answer:"""
 
     if not API_KEY:
         raise ValueError("API_KEY not found in environment variables. Please set it in .env file.")
