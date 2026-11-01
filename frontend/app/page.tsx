@@ -155,7 +155,7 @@ export default function ChatPage() {
       <header className="border-b px-6 py-4" style={{ backgroundColor: theme.panelBg, borderColor: theme.border }}>
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/biobuzzlogo.png" alt="BioBuzz Logo" className="h-12 w-auto" />
+            <img src="/biobuzzlogo.webp" alt="BioBuzz Logo" className="h-12 w-auto" />
             <div>
               <h1 className="text-xl font-medium" style={{ color: theme.text }}>
                 FTC BioBuzz Chatbot
