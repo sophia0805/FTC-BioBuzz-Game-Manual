@@ -70,7 +70,7 @@ def chat(request: ChatRequest):
 
     try:
         context = retrieve_context(query)
-        prompt = f"""You are an assistant for the FIRST Tech Challenge game manual.
+        prompt = f"""You are an assistant for the FIRST Tech Challenge 2026-2027 BioBuzz game manual.
 Use only the game-manual excerpts below. If the answer is not in the excerpts, say you cannot find it in the provided rules.
 Cite page numbers when they are available.
 

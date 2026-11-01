@@ -48,51 +48,51 @@ export default function ChatPage() {
   }, [messages]);
 
   const lightTheme = {
-    appBg: '#ffffff',
+    appBg: '#fffbf0',
     panelBg: '#ffffff',
-    border: 'rgba(52, 71, 104, 0.2)',
-    text: '#344768',
-    mutedText: '#6b7a99',
-    iconBg: 'rgb(211, 174, 26, 0.1)',
-    iconHoverBg: 'rgba(52, 71, 104, 0.2)',
-    userBubble: '#9053a0',
-    userText: '#ffffff',
-    assistantBubble: '#344768',
-    assistantText: '#ffffff',
-    buttonBg: '#344768',
-    buttonHover:'rgb(211, 174, 26)',
-    buttonActive: '#1f2a3d',
-    buttonText: '#ffffff',
-    loadingBubble: '#344768',
+    border: 'rgba(180, 120, 0, 0.2)',
+    text: '#1a1200',
+    mutedText: '#7a5c00',
+    iconBg: 'rgba(251, 191, 36, 0.15)',
+    iconHoverBg: 'rgba(251, 191, 36, 0.35)',
+    userBubble: '#1a1200',
+    userText: '#fbbf24',
+    assistantBubble: '#fbbf24',
+    assistantText: '#1a1200',
+    buttonBg: '#1a1200',
+    buttonHover: '#f59e0b',
+    buttonActive: '#000000',
+    buttonText: '#fbbf24',
+    loadingBubble: '#fbbf24',
     inputBg: '#ffffff',
-    inputText: '#344768',
-    inputBorder: 'rgba(52, 71, 104, 0.3)',
-    footerText: '#344768',
-    iconColor: '#344768',
+    inputText: '#1a1200',
+    inputBorder: 'rgba(180, 120, 0, 0.35)',
+    footerText: '#7a5c00',
+    iconColor: '#1a1200',
   };
 
   const darkTheme = {
-    appBg: '#1a2332',
-    panelBg: '#1f2a3d',
-    border: 'rgba(255, 255, 255, 0.15)',
-    text: '#f1f5fb',
-    mutedText: '#cbd5f5',
-    iconBg: 'rgba(255, 255, 255, 0.1)',
-    iconHoverBg: 'rgba(255, 255, 255, 0.2)',
-    userBubble: '#f1f5fb',
-    userText: '#9053a0',
-    assistantBubble: '#f1f5fb',
-    assistantText: '#344768',
-    buttonBg: '#f1f5fb',
-    buttonHover: 'rgb(211, 174, 26)',
-    buttonActive: '#c0cffb',
-    buttonText: '#1a2332',
-    loadingBubble: '#2f3b57',
-    inputBg: '#1a2332',
-    inputText: '#f1f5fb',
-    inputBorder: 'rgba(255, 255, 255, 0.3)',
-    footerText: '#cbd5f5',
-    iconColor: '#f1f5fb',
+    appBg: '#0f0a00',
+    panelBg: '#1a1200',
+    border: 'rgba(251, 191, 36, 0.2)',
+    text: '#fef3c7',
+    mutedText: '#fbbf24',
+    iconBg: 'rgba(251, 191, 36, 0.1)',
+    iconHoverBg: 'rgba(251, 191, 36, 0.25)',
+    userBubble: '#fbbf24',
+    userText: '#1a1200',
+    assistantBubble: '#2a1f00',
+    assistantText: '#fef3c7',
+    buttonBg: '#fbbf24',
+    buttonHover: '#f59e0b',
+    buttonActive: '#d97706',
+    buttonText: '#1a1200',
+    loadingBubble: '#2a1f00',
+    inputBg: '#0f0a00',
+    inputText: '#fef3c7',
+    inputBorder: 'rgba(251, 191, 36, 0.3)',
+    footerText: '#fbbf24',
+    iconColor: '#fbbf24',
   };
 
   const theme = isDarkMode ? darkTheme : lightTheme;
@@ -155,13 +155,13 @@ export default function ChatPage() {
       <header className="border-b px-6 py-4" style={{ backgroundColor: theme.panelBg, borderColor: theme.border }}>
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/decodelogo.svg" alt="BioBuzz Logo" className="h-15 w-auto" />
+            <img src="/biobuzzlogo.png" alt="BioBuzz Logo" className="h-12 w-auto" />
             <div>
               <h1 className="text-xl font-medium" style={{ color: theme.text }}>
                 FTC BioBuzz Chatbot
           </h1>
               <p className="text-xs" style={{ color: theme.mutedText }}>
-                Ask me anything about the FTC Game Manual for the 2025-2026 season!
+                Ask me anything about the FTC Game Manual for the 2026-2027 season!
           </p>
         </div>
           </div>
@@ -218,7 +218,7 @@ export default function ChatPage() {
                 Welcome! 👋
               </h2>
               <p className="mb-2 text-lg" style={{ color: theme.mutedText }}>
-                I'm here to help you find answers about the rules for the 2025-2026 FTC BioBuzz season!
+                I'm here to help you find answers about the rules for the 2026-2027 FTC BioBuzz season!
               </p>
               <p className="text-sm" style={{ color: theme.mutedText }}>
                 Start a conversation by typing a message below
