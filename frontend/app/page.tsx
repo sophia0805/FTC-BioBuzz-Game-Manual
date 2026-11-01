@@ -155,10 +155,10 @@ export default function ChatPage() {
       <header className="border-b px-6 py-4" style={{ backgroundColor: theme.panelBg, borderColor: theme.border }}>
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/decodelogo.svg" alt="Decode Logo" className="h-15 w-auto" />
+            <img src="/decodelogo.svg" alt="BioBuzz Logo" className="h-15 w-auto" />
             <div>
               <h1 className="text-xl font-medium" style={{ color: theme.text }}>
-                FTC Decode Chatbot
+                FTC BioBuzz Chatbot
           </h1>
               <p className="text-xs" style={{ color: theme.mutedText }}>
                 Ask me anything about the FTC Game Manual for the 2025-2026 season!
@@ -218,7 +218,7 @@ export default function ChatPage() {
                 Welcome! 👋
               </h2>
               <p className="mb-2 text-lg" style={{ color: theme.mutedText }}>
-                I'm here to help you find answers about the rules for the 2025-2026 FTC Decode season!
+                I'm here to help you find answers about the rules for the 2025-2026 FTC BioBuzz season!
               </p>
               <p className="text-sm" style={{ color: theme.mutedText }}>
                 Start a conversation by typing a message below
